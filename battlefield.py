@@ -32,7 +32,7 @@ class Battlefield:
     def battle(self, choice, opponent):
         dino_health = 100
         robot_health = 100
-        while dino_health <= 0 or robot_health <= 0:
+        while dino_health <= 0 or robot_health <= 0 :
             number = random.choice([1,2])
             print(number)
             if number == 1:
