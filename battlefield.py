@@ -20,8 +20,6 @@ class Battlefield:
     def display_welcome(self):
         print("Welcome the to battle!")
         choice = input("Please choose who to fight as! \n 1 for Dinosaurs \n 2 for Robots \n")
-        # answer = False
-        # while answer == False:
         if choice == "1":
             self.show_dino_opponet_options()
 
@@ -113,5 +111,3 @@ class Battlefield:
 
         
 
-# battle = Battlefield()
-# battle.show_dino_opponet_options()

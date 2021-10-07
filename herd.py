@@ -14,13 +14,10 @@ class Herd:
         self.dinosaurs.append(dino1)
         self.dinosaurs.append(dino2)
         self.dinosaurs.append(dino3)
-        # for item in self.dinosaurs:
-        #     print(item)
+        
         
 
     
             
     
-# new = Herd()
-# new.create_herd() 
-        
+
