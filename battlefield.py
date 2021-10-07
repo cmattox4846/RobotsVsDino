@@ -1,3 +1,4 @@
+from math import fabs
 import random
 import sys
 from fleet import Fleet
@@ -32,7 +33,8 @@ class Battlefield:
     def battle(self, choice, opponent):
         dino_health = 100
         robot_health = 100
-        while dino_health <= 0 or robot_health <= 0 :
+        battle_over =False
+        while battle_over == False:
             number = random.choice([1,2])
             print(number)
             if number == 1:
@@ -41,6 +43,10 @@ class Battlefield:
             elif number == 2:
                 robot_health = self.robot_turn(opponent,choice)
                 dino_health = self.dino_turn(choice, opponent)
+            if dino_health <= 0:
+                battle_over = True
+            elif robot_health <= 0:
+                battle_over = True 
                 
 
         
