@@ -1,4 +1,3 @@
-import random
 from dinosaur import Dinosaurs
 import random
 
@@ -12,15 +11,16 @@ class Herd:
         dino1 = Dinosaurs('TRex', 100, 55)
         dino2 = Dinosaurs('Stegosaurus', 100, 23)
         dino3 = Dinosaurs('Brontosaurus', 100, 28)
-        self.dinosaurs.append[{dino1}]
-        self.dinosaurs.append[{dino2}]
-        self.dinosaurs.append[{dino3}]
+        self.dinosaurs.append({dino1})
+        self.dinosaurs.append({dino2})
+        self.dinosaurs.append({dino3})
+        print(self.dinosaurs)
         pass
 
     def choose_dino(self):
-        for items in self.dinosaurs:
-            self.dinosaur = random.choice(items)
+        self.dinosaur = random.choice(self.dinosaurs)
+            
     
     def __str__(self):
-        return self.dinosaur
-        pass
+        return self.dinosaur.name
+        

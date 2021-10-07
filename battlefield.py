@@ -1,12 +1,12 @@
-from random import choice
+
 from fleet import Fleet
 from herd import Herd
 
 
 class Battlefield:
     def __init__(self):
-        self.fleet = Fleet
-        self.herd = Herd
+        self.fleet = Fleet()
+        self.herd = Herd()
         pass
 
     def run_game(self):
@@ -35,15 +35,17 @@ class Battlefield:
         pass
 
     def dino_turn(self, dinosaur):
-        self.herd
+    
+        
         pass
 
     def robot_turn(self, robot):
         pass
 
     def show_dino_opponet_options(self):
-        dino = self.herd.choose_dino
-        answer = input(f'You dino fighter wwill be {self.herd.choose_dino}\n Ready to fight type 1!\n To choose another dino type 2\n')
+        self.herd.create_heard()
+        dino = self.herd.choose_dino()
+        answer = input(f'You dino fighter will be {self.herd.dinosaur}\n Ready to fight type 1!\n To choose another dino type 2\n')
         if answer == '1':
             self.battle(dino)
         else:
@@ -52,7 +54,8 @@ class Battlefield:
         pass
 
     def show_robo_opponenet_options(self):
-        answer = input(f'You dino fighter wwill be {self.fleet.choose_dino}\n Ready to fight type 1!\n To choose another robot type 2\n')
+        robo = Fleet
+        answer = input(f'You dino fighter wwill be{robo.robot.name}\n Ready to fight type 1!\n To choose another robot type 2\n')
         if answer == '1':
            self.battle()
         else:
