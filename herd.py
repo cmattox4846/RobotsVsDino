@@ -4,23 +4,23 @@ import random
 class Herd:
     def __init__(self):
         self.dinosaurs = []
-        self.dinosaur = {}
-        pass
+        self.selected_dinosaur = {}
+        
 
-    def create_heard(self):
+    def create_herd(self):
         dino1 = Dinosaurs('TRex', 100, 55)
         dino2 = Dinosaurs('Stegosaurus', 100, 23)
         dino3 = Dinosaurs('Brontosaurus', 100, 28)
-        self.dinosaurs.append({dino1})
-        self.dinosaurs.append({dino2})
-        self.dinosaurs.append({dino3})
-        print(self.dinosaurs)
-        pass
+        self.dinosaurs.append(dino1)
+        self.dinosaurs.append(dino2)
+        self.dinosaurs.append(dino3)
+        # for item in self.dinosaurs:
+        #     print(item)
+        
 
-    def choose_dino(self):
-        self.dinosaur = random.choice(self.dinosaurs)
+    
             
     
-    def __str__(self):
-        return self.dinosaur.name
+# new = Herd()
+# new.create_herd() 
         

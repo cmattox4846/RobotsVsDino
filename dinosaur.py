@@ -6,12 +6,13 @@ class Dinosaurs:
         self.name = name
         self.attack_power = attack_power
         self.health = health
-        pass
+        
     
     
     def attack(self, robot):
         robot.health -= self.attack_power
-        pass
+        return robot.health
+       
 
     
     def __str__(self):
