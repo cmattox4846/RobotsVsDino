@@ -8,20 +8,20 @@ from weapon import Weapon
 class Fleet:
     def __init__(self):
         self.robots = []
-        self.robot = {}
-        self.weapon.weapon_builder()
+        self.weapons = []
         
+        
+    
+  
+
     def create_fleet(self):
-        self.weapon.weapon_builder()
-        W1 = self.weapon.weapons[0].attack_power
-        W2 = self.weapon.weapons[1].attack_power
-        W3 = self.weapon.weapons[2].attack_power
-        Robo1 = Robots('MegaTron', 100, W1)
-        Robo2 = Robots('Skyscream', 100, W2)
-        Robo3 = Robots('BumbleBee', 100, W3)
-        # Robo1 = Robots('MegaTron', 100, self.weapon[0].attack_power)
-        # Robo2 = Robots('Skyscream', 100, self.weapon[1].attack_power)
-        # Robo3 = Robots('BumbleBee', 100, self.weapon[2].attack_power)
+        weapon1 = Weapon("Sword", 8)
+        weapon2 = Weapon("AR-15", 13)
+        weapon3 = Weapon("Knife", 11)
+             
+        Robo1 = Robots('MegaTron', 100, weapon1.attack_power)
+        Robo2 = Robots('Skyscream', 100, weapon2.attack_power)
+        Robo3 = Robots('BumbleBee', 100, weapon3.attack_power)
         self.robots.append(Robo1)
         self.robots.append(Robo2)
         self.robots.append(Robo3)
@@ -35,5 +35,6 @@ class Fleet:
 
 
 
-
+# new = Fleet()
+# new.create_fleet()
   

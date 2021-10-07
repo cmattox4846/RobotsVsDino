@@ -20,9 +20,9 @@ class Robots:
         weapon1 = Weapon("Sword", 33)
         weapon2 = Weapon("AR-15", 24)
         weapon3 = Weapon("Knife", 15)
-        self.weapons.append[weapon1]
-        self.weapons.append[weapon2]
-        self.weapons.append[weapon3]
+        self.weapons.append(weapon1)
+        self.weapons.append(weapon2)
+        self.weapons.append(weapon3)
         for item in self.weapons:
             print(item)
         
@@ -37,5 +37,3 @@ class Robots:
         return ("Weapon is: " + self.weapon)
 
 
-new = 
-new.weapons

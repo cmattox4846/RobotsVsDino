@@ -32,14 +32,22 @@ class Battlefield:
     def battle(self, choice, opponent):
         dino_health = 100
         robot_health = 100
-        while dino_health > 0 or robot_health > 0:
+        while dino_health >= 0 or robot_health >= 0:
+            number = random.choice([1,2])
+            print(number)
+            if number == 1:
                 dino_health = self.dino_turn(choice, opponent)
                 robot_health = self.robot_turn(opponent,choice)
+            elif number == 2:
+                robot_health = self.robot_turn(opponent,choice)
+                dino_health = self.dino_turn(choice, opponent)
+                
+
         
         if dino_health >= 0:
             winner = "Dinosaurs!"
             self.display_winner(winner)
-        else:
+        elif robot_health >= 0:
             winner = "Robots!"
             self.display_winner(winner)
             
@@ -48,13 +56,13 @@ class Battlefield:
 
     def dino_turn(self, dinosaur, robot_to_attack):
         robo_health = dinosaur.attack(robot_to_attack)
-       # print(robot_to_attack.health)
+        print(f"Robots health is now: {robot_to_attack.health}")
         return robo_health
         
 
     def robot_turn(self, robot, dino_to_attack):
         dino_health = robot.attack(dino_to_attack)
-        #print(dino_to_attack.health)
+        print(f'Dinos health is now: {dino_to_attack.health}')
         return dino_health
        
 
